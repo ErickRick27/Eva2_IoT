@@ -5,6 +5,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+<<<<<<< HEAD
+=======
+import android.R
+
+>>>>>>> 73d23e4 (avance)
 
 class RecoverActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

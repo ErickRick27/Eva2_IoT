@@ -1,4 +1,8 @@
 package com.example.a1134a_i
+<<<<<<< HEAD
+=======
+import com.example.a1134a_i.R
+>>>>>>> 73d23e4 (avance)
 
 import android.os.Bundle
 import android.widget.Button
@@ -9,6 +13,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 73d23e4 (avance)
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
