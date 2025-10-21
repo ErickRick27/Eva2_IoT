@@ -1,4 +1,6 @@
 package com.tuapp.iotapp
+import com.tuapp.iotapp.R
+
 
 import android.app.AlertDialog
 import android.bluetooth.BluetoothAdapter
@@ -7,11 +9,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-<<<<<<< HEAD
-=======
-import android.R
-
->>>>>>> 73d23e4 (avance)
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

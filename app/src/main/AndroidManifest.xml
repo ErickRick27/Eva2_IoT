@@ -2,20 +2,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tuapp.iotapp">
 
-    <!-- Permisos necesarios -->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--
+      Permisos de Bluetooth para Android 12 (API 31) y superior.
+      Estos son OBLIGATORIOS para que el Bluetooth funcione en versiones nuevas.
+    -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!--
+      Permisos de Bluetooth para versiones anteriores a Android 12.
+      El atributo maxSdkVersion="30" asegura que solo se usen en APIs 30 o inferiores.
+    -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="IoT App"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        >
+        android:supportsRtl="true">
 
         <!-- Pantalla principal: Splash -->
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +33,17 @@
             </intent-filter>
         </activity>
 
-        <!-- Otras pantallas -->
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".RecoverActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".RecoverActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginActivity" />
 
     </application>
 

@@ -1,69 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="70dp"
-    android:background="#5eb298">
+    android:background="#5eb298"
+    android:padding="24dp">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <!-- 1. Botón "Volver" posicionado en la esquina superior izquierda -->
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Volver"
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+    <!-- 2. ScrollView que contiene solo el formulario -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
 
-        <Button
-            android:id="@+id/btnVolver"
-            android:text="Volver"
-            android:textSize="12sp"
-            android:layout_marginTop="24dp"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:textColor="#e46c32"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Registrar Cuenta"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editName"
-            android:hint="Nombre"
-            android:padding="12dp"
-            android:textSize="15sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="#CCe46c32"
+                android:padding="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="center"
+                android:elevation="6dp"
+                android:clipToOutline="true"
+                android:layout_gravity="center">
 
-        <EditText
-            android:id="@+id/editEmail"
-            android:hint="Correo electrónico"
-            android:inputType="textEmailAddress"
-            android:padding="12dp"
-            android:textSize="15sp"
-            android:layout_marginTop="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Registrar Cuenta"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editPassword"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:textSize="15sp"
-            android:layout_marginTop="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/editName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre"
+                    android:padding="12dp"
+                    android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/btnRegister"
-            android:text="Registrar"
-            android:textSize="12sp"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:textColor="#e46c32"/>
-    </LinearLayout>
-</ScrollView>
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Correo electrónico"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/editPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:text="Registrar"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

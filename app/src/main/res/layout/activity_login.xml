@@ -74,7 +74,7 @@
 
             <Button
                 android:id="@+id/btnRegister"
-                android:text="Registrar cuenta"
+                android:text="Crear Cuenta"
                 android:textSize="12sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

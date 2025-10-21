@@ -1,5 +1,4 @@
-package com.example.a1134a_i
-import com.tuapp.iotapp.R
+package com.tuapp.iotapp
 
 import android.os.Bundle
 import android.widget.Button
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val principalButton = findViewById<Button>(R.id.buttonBienvenida)
 
         principalButton.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Hola buen día", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "Hola, bienvenido", Toast.LENGTH_LONG).show()
 
             AlertDialog.Builder(this@MainActivity)
                 .setTitle("Saludo especial")
