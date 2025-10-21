@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
-=======
     android:id="@+id/main"
->>>>>>> 73d23e4 (avance)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5eb298">
+    android:background="#5eb298">  <!-- color sólido -->
 
     <ImageView
         android:id="@+id/logoImage"

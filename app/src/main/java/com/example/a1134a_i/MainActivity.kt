@@ -1,8 +1,4 @@
 package com.example.a1134a_i
-<<<<<<< HEAD
-=======
-import com.example.a1134a_i.R
->>>>>>> 73d23e4 (avance)
 
 import android.os.Bundle
 import android.widget.Button
@@ -13,15 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 73d23e4 (avance)
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -29,15 +21,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val principalButton = findViewById<Button>(R.id.buttonBienvenida);
+        val principalButton = findViewById<Button>(R.id.buttonBienvenida)
 
-        principalButton.setOnClickListener{
-            Toast.makeText(this@MainActivity,"Hola buen día",Toast.LENGTH_LONG).show();
+        principalButton.setOnClickListener {
+            Toast.makeText(this@MainActivity, "Hola buen día", Toast.LENGTH_LONG).show()
 
             AlertDialog.Builder(this@MainActivity)
                 .setTitle("Saludo especial")
-                .setMessage("¡Hola bienvenido a nuestra experiencia mobile!")
-                .setPositiveButton("Gracias..."){d,_ -> d.dismiss()}
+                .setMessage("¡Hola, bienvenido a nuestra experiencia mobile!")
+                .setPositiveButton("Gracias...") { d, _ -> d.dismiss() }
                 .show()
         }
     }
