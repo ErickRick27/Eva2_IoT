@@ -2,17 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tuapp.iotapp">
 
-    <!--
-      Permisos de Bluetooth para Android 12 (API 31) y superior.
-      Estos son OBLIGATORIOS para que el Bluetooth funcione en versiones nuevas.
-    -->
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-
-    <!--
-      Permisos de Bluetooth para versiones anteriores a Android 12.
-      El atributo maxSdkVersion="30" asegura que solo se usen en APIs 30 o inferiores.
-    -->
     <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
 
