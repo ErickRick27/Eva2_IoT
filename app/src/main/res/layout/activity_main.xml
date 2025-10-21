@@ -3,7 +3,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5eb298">  <!-- color sólido -->
+    android:background="#5eb298">
 
     <ImageView
         android:id="@+id/logoImage"
@@ -12,13 +12,10 @@
         android:layout_width="180dp"
         android:layout_height="180dp" />
 
-    <TextView
-        android:text="IoT App"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_below="@id/logoImage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+    <Button
+        android:id="@+id/buttonBienvenida"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
 
 </RelativeLayout>
