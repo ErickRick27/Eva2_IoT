@@ -1,36 +1,27 @@
 package com.tuapp.iotapp
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AlertDialog
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        // Duración de la pantalla de bienvenida (ej: 2 segundos)
+        val splashScreenDuration = 3000L
 
-        val principalButton = findViewById<Button>(R.id.buttonBienvenida)
+        // Handler para ejecutar una acción después de un tiempo determinado
+        Handler(Looper.getMainLooper()).postDelayed({
+            // Crea un Intent para ir a LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
 
-        principalButton.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Hola, bienvenido", Toast.LENGTH_LONG).show()
-
-            AlertDialog.Builder(this@MainActivity)
-                .setTitle("Saludo especial")
-                .setMessage("¡Hola, bienvenido a nuestra experiencia mobile!")
-                .setPositiveButton("Gracias...") { d, _ -> d.dismiss() }
-                .show()
-        }
+            // Cierra MainActivity para que el usuario no pueda volver a ella con el botón de "atrás"
+            finish()
+        }, splashScreenDuration)
     }
 }

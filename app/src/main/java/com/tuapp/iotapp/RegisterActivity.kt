@@ -3,7 +3,7 @@ import com.tuapp.iotapp.R
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.view.MenuItem // <-- Importa esta clase
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
